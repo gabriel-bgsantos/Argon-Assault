@@ -13,10 +13,10 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalThrow = Input.GetAxis("Horizontal"); //remember to store it on a variable if the string is used many times (prevent from typing error)
-        Debug.Log(horizontalThrow);
+        float xThrow = Input.GetAxis("Horizontal"); //remember to store it on a variable if the string is used many times (prevent from typing error)
+        Debug.Log(xThrow);
 
-        float verticalThrow = Input.GetAxis("Vertical");
-        Debug.Log(verticalThrow);
+        float yThrow = Input.GetAxis("Vertical");
+        Debug.Log(yThrow);
     }
 }
