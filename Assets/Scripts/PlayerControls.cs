@@ -23,13 +23,11 @@ public class PlayerControls : MonoBehaviour
 
     float xThrow, yThrow;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         ShipMovement();
@@ -39,7 +37,7 @@ public class PlayerControls : MonoBehaviour
     void ShipMovement()
     {
         // Getting the raw position of the spaceship
-        xThrow = Input.GetAxis("Horizontal"); //remember to store it on a variable if the string is used many times (prevent from typing error)
+        xThrow = Input.GetAxis("Horizontal"); // remember to store it on a variable if the string is used many times (prevent from typing error)
         yThrow = Input.GetAxis("Vertical");
         
         // Control of the spaceship speed
@@ -54,7 +52,7 @@ public class PlayerControls : MonoBehaviour
         float xClampedPos = Mathf.Clamp(xRawPos, -xRange, xRange);
         float yClampedPos = Mathf.Clamp(yRawPos, -yRange, yRange);
 
-        transform.localPosition = new Vector3(xClampedPos, yClampedPos, transform.localPosition.z); //get the local position of the ship
+        transform.localPosition = new Vector3(xClampedPos, yClampedPos, transform.localPosition.z); // get the local position of the ship
     }
 
     void ShipRotation()
@@ -68,9 +66,9 @@ public class PlayerControls : MonoBehaviour
         float rollDueToPosition = transform.localPosition.x * positionRollFactor;
         float rollDueToThrow = xThrow * controlRollFactor;
 
-        float pitch = pitchDueToPosition + pitchDueToThrow; //rotation on x axis
-        float yaw = yawDueToPosition + yawDueToThrow; //rotation on y axis
-        float roll = rollDueToPosition + rollDueToThrow; //rotation on z axis
+        float pitch = pitchDueToPosition + pitchDueToThrow; // rotation on x axis
+        float yaw = yawDueToPosition + yawDueToThrow; // rotation on y axis
+        float roll = rollDueToPosition + rollDueToThrow; // rotation on z axis
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll); // y rotation, x rotation, z rotation
     }
