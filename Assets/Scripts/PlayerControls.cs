@@ -32,6 +32,7 @@ public class PlayerControls : MonoBehaviour
     {
         ShipMovement();
         ShipRotation();
+        ShipFiring();
     }
 
     void ShipMovement()
@@ -71,5 +72,20 @@ public class PlayerControls : MonoBehaviour
         float roll = rollDueToPosition + rollDueToThrow; // rotation on z axis
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll); // y rotation, x rotation, z rotation
+    }
+
+    void ShipFiring()
+    {
+        ParticleSystem laser = GetComponent<ParticleSystem>();
+
+        if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("AAAAA");
+            if (!laser.isEmitting) {
+                laser.Play();
+            }
+            else {
+                return;
+            }
+        }
     }
 }
