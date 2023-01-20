@@ -21,6 +21,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float positionRollFactor = -0f;
     [SerializeField] float controlRollFactor = -0f;
 
+    [SerializeField] GameObject[] lasers;
+    
     float xThrow, yThrow;
 
     void Start()
@@ -76,16 +78,23 @@ public class PlayerControls : MonoBehaviour
 
     void ShipFiring()
     {
-        ParticleSystem laser = GetComponent<ParticleSystem>();
+        if (Input.GetButton("Fire1")) {
+            SetLasersActive(true);
+            Debug.Log("AAAA");
+        }
+        
+        else {
+            SetLasersActive(false);
+        }
+        
+    }
 
-        if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("AAAAA");
-            if (!laser.isEmitting) {
-                laser.Play();
-            }
-            else {
-                return;
-            }
+    void SetLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 }

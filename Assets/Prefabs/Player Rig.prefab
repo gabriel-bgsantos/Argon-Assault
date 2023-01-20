@@ -145,6 +145,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6655278800054046439}
     m_Modifications:
+    - target: {fileID: 2617493823515393731, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617493823515393731, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 8083597345248320894}
+    - target: {fileID: 2617493823515393731, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8776814491688674205}
+    - target: {fileID: 3612238975485231844, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612238975485231844, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306134511815883783, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306134511815883783, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5288099281018535768, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
       propertyPath: m_Name
       value: Player Ship
@@ -193,10 +221,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7284455608403468018, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
 --- !u!4 &6650842450432239810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5293322529110666062, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+  m_PrefabInstance: {fileID: 1529290051768058764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8083597345248320894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7284455608403468018, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
+  m_PrefabInstance: {fileID: 1529290051768058764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8776814491688674205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7851079770144382993, guid: ce2128eae9589124aaeac1e868c1ca88, type: 3}
   m_PrefabInstance: {fileID: 1529290051768058764}
   m_PrefabAsset: {fileID: 0}
