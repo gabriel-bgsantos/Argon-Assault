@@ -6,7 +6,8 @@ public class PlayerControls : MonoBehaviour
 {
     // to do: create a focus on enemy (lock positionFactors when enemy is focused) - maybe just don't lock positionRollFactor, if locked then unlock only if the player uses the 360° skill
     // to do: create a skill button where the spaceship rotate 360° (increase positionRollFactor)
-
+    // to do: Implement what was asked on lessons: 81 and 87
+    
     [SerializeField] float xControlSpeed = 0f;
     [SerializeField] float yControlSpeed = 0f;
     [SerializeField] float xRange = 0f;
