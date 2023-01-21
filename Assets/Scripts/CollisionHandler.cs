@@ -4,26 +4,16 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
-    //Study the docs about Collision and Triggers
-    //After that, rewatch lesson 88
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Collision Enter!");
+        //collision affect one object physics, making it react phisically to the collision
+        Debug.Log(this.name + "--Collided with--" + other.gameObject.name); // don't need the 'this' right here, but it's better to understando what's going on
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Trigger Enter!");
+        //trigger doens't affect one object physics, but trigger something after colliding with other object
+        Debug.Log($"{this.name} **Triggered by** {other.gameObject.name}"); // strings interpolation just to remember
     }
 }
+
+// you can't use both, or you collide using Rigidbody and its options (Is Kinematic or not)
+// or you trigger using the static collider (Is Trigger or not)

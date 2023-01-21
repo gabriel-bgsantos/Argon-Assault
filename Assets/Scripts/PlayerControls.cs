@@ -81,7 +81,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetButton("Fire1")) {
             SetLasersActive(true);
-            Debug.Log("AAAA");
+            Debug.Log("Shooting");
         }
         
         else {
@@ -97,5 +97,7 @@ public class PlayerControls : MonoBehaviour
             var emissionModule = laser.GetComponent<ParticleSystem>().emission;
             emissionModule.enabled = isActive;
         }
+        
+        
     }
 }
