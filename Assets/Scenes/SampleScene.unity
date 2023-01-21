@@ -768,13 +768,33 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3533571160783107422, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533571160783107422, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_Center.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533571160783107422, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533571160783107422, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533571160783107422, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3560682578715704655, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
       propertyPath: lasers.Array.data[0]
       value: 
       objectReference: {fileID: 1364111585}
+    - target: {fileID: 5307077839838654234, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 6022834690135646265, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
       propertyPath: m_RootOrder
       value: 28
