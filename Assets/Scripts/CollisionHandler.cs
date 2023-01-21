@@ -15,5 +15,6 @@ public class CollisionHandler : MonoBehaviour
     }
 }
 
+// below, tips about the object that WILL COLLIDE with the 'MAIN object' that will definitelly have a Rigidbody:
 // you can't use both, or you collide using Rigidbody and its options (Is Kinematic or not)
 // or you trigger using the static collider (Is Trigger or not)
