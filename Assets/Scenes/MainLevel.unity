@@ -821,6 +821,10 @@ PrefabInstance:
       propertyPath: lasers.Array.data[0]
       value: 
       objectReference: {fileID: 1364111585}
+    - target: {fileID: 4236724222017870713, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5307077839838654234, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.26
@@ -837,6 +841,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844371911117768040, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: crashVFX
+      value: 
+      objectReference: {fileID: 6655278801193831742}
     - target: {fileID: 5844371911117768040, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
       propertyPath: crashParticles
       value: 
@@ -921,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8515655742130809129, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7133354156001106006, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 585c1bc09aeb48d41957716e6bc6de12, type: 3}
