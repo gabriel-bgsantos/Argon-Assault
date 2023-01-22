@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other) {
-        //collision affect one object physics, making it react phisically to the collision
-        Debug.Log(this.name + "--Collided with--" + other.gameObject.name); // don't need the 'this' right here, but it's better to understando what's going on
-    }
+    [SerializeField] float delayTime = 1f;
+    bool isTransitioning = false;
 
     private void OnTriggerEnter(Collider other) {
         //trigger doens't affect one object physics, but trigger something after colliding with other object
         Debug.Log($"{this.name} **Triggered by** {other.gameObject.name}"); // strings interpolation just to remember
+        if (isTransitioning) {
+            return;
+        }
+        else {
+            CrashSequence();
+        }
     }
+
+    private void CrashSequence()
+    {
+        isTransitioning = true;
+        GetComponent<PlayerControls>().enabled = false;
+        Invoke("ReloadScene", delayTime);
+
+    }
+
+    private void ReloadScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; //getting scene index number
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
 }
 
 // below, tips about the object that WILL COLLIDE with the 'MAIN object' that will definitelly have a Rigidbody:
