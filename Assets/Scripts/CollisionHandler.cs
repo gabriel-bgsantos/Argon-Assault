@@ -6,28 +6,26 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float delayTime = 1f;
-    [SerializeField] ParticleSystem crashVFX;
+    //[SerializeField] ParticleSystem crashVFX;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] Transform parent;
     
-    bool isTransitioning = false;
-
+    
     private void OnTriggerEnter(Collider other) {
         //trigger doens't affect one object physics, but trigger something after colliding with other object
         Debug.Log($"{this.name} **Triggered by** {other.gameObject.name}"); // strings interpolation just to remember
-        if (isTransitioning) {
-            return;
-        }
-        else {
-            CrashSequence();
-        }
+        CrashSequence(); // do not need 'isTransitioning' because will destroy gameObject after collision
     }
 
     private void CrashSequence()
     {
-        isTransitioning = true;
-        crashVFX.Play();
-        GetComponent<PlayerControls>().enabled = false;
-        //GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<BoxCollider>().enabled = false;
+        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parent);
+        //dont use the code below because the player ship does not have a meshRenderer
+            //crashVFX.Play();
+            //GetComponent<PlayerControls>().enabled = false;
+            //GetComponent<MeshRenderer>().enabled = false;
+            //GetComponent<BoxCollider>().enabled = false;
+        Destroy(gameObject);
         Invoke("ReloadScene", delayTime);
 
     }
