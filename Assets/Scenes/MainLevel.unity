@@ -445,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 186547885}
+  health: 10
   scorePerHit: 15
 --- !u!95 &1278231515 stripped
 Animator:
@@ -490,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 186547885}
+  health: 10
   scorePerHit: 15
 --- !u!65 &1656738295
 BoxCollider:
@@ -643,7 +645,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3a6a96fb7754734c98792094a9f1c7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -702,6 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   parent: {fileID: 186547885}
+  health: 100
   scorePerHit: 50
 --- !u!1001 &3119301393557027456
 PrefabInstance:
@@ -1062,6 +1065,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7220118425264514018, guid: cdd54a7dc4fc6f34b8f7b0411b043876, type: 3}
+      propertyPath: m_margin.z
+      value: -375.80365
+      objectReference: {fileID: 0}
     - target: {fileID: 7220118425540728531, guid: cdd54a7dc4fc6f34b8f7b0411b043876, type: 3}
       propertyPath: m_Pivot.x
       value: 0
