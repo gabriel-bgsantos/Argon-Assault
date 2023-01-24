@@ -28,14 +28,6 @@ public class Enemy : MonoBehaviour
         KillEnemy();
     }
 
-    private void ProcessHit()
-    {
-        if(Time.time > nextScore) { //this if for cooldown is to prevent the bug of increasing the score 2 times for the same enemy (2 lasers hitting almost at the same time) - in case of score by hit
-            scoreBoard.ScoreManager(scorePerHit);
-            nextScore = Time.time + timeCooldown;
-        }
-    }
-
     private void KillEnemy()
     {
         health--;
@@ -44,6 +36,14 @@ public class Enemy : MonoBehaviour
             //vfx.transform.parent = parent;
             Destroy(gameObject);
             ProcessHit();
+        }
+    }
+
+    private void ProcessHit()
+    {
+        if(Time.time > nextScore) { //this if for cooldown is to prevent the bug of increasing the score 2 times for the same enemy (2 lasers hitting almost at the same time) - in case of score by hit
+            scoreBoard.ScoreManager(scorePerHit);
+            nextScore = Time.time + timeCooldown;
         }
     }
 }
