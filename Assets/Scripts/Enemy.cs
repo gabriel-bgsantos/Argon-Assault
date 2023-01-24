@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private void Start() 
     {
-        scoreBoard = FindObjectOfType<ScoreBoard>(); 
+        scoreBoard = FindObjectOfType<ScoreBoard>(); // using this cause it searches all the project, while GetComponent only searches in the gameObject it is called
     }
 
     private void Update() {
