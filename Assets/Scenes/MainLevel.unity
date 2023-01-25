@@ -818,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaw at Runtime
       objectReference: {fileID: 0}
+    - target: {fileID: 3665032056216652751, guid: 72cefa22289119f4ba19d93a5762bcdf, type: 3}
+      propertyPath: m_TagString
+      value: SpawnAtRuntime
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72cefa22289119f4ba19d93a5762bcdf, type: 3}
 --- !u!1001 &6655278801193831741

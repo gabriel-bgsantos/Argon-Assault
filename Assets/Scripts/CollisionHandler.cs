@@ -8,9 +8,13 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float delayTime = 1f;
     //[SerializeField] ParticleSystem crashVFX;
     [SerializeField] GameObject deathVFX;
-    [SerializeField] Transform parent;
+    [SerializeField] GameObject parentGameObject;
     
-    
+    private void Start() 
+    {
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
+    }
+
     private void OnTriggerEnter(Collider other) {
         //trigger doens't affect one object physics, but trigger something after colliding with other object
         Debug.Log($"{this.name} **Triggered by** {other.gameObject.name}"); // strings interpolation just to remember
@@ -19,7 +23,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void CrashSequence()
     {
-        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parent);
+        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parentGameObject.transform);
         //dont use the code below because the player ship does not have a meshRenderer
             //crashVFX.Play();
             //GetComponent<PlayerControls>().enabled = false;

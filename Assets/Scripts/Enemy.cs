@@ -5,17 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
-    [SerializeField] Transform parent;
     [SerializeField] int health = 0;
+    [SerializeField] int scorePerHit = 0;
 
     ScoreBoard scoreBoard;
-    [SerializeField] int scorePerHit = 0;
+    GameObject parentGameObject;
+    
     float nextScore;
     float timeCooldown = 0.2f;
 
     private void Start() 
     {
         scoreBoard = FindObjectOfType<ScoreBoard>(); // using this cause it searches all the project, while GetComponent only searches in the gameObject it is called
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
     }
 
     private void Update() {
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour
     {
         health--;
         if(health < 1){
-            GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parent);
+            GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parentGameObject.transform);
             //vfx.transform.parent = parent;
             Destroy(gameObject);
             ProcessHit();
