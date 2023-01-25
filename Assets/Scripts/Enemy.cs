@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] int health = 0;
     [SerializeField] int scorePerHit = 0;
 
@@ -34,8 +34,8 @@ public class Enemy : MonoBehaviour
     {
         health--;
         if(health < 1){
-            GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity, transform.parent = parentGameObject.transform);
-            //vfx.transform.parent = parent;
+            GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity, transform.parent = parentGameObject.transform);
+            //fx.transform.parent = parent;
             Destroy(gameObject);
             ProcessHit();
         }
