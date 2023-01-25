@@ -1537,7 +1537,7 @@ MonoBehaviour:
   updateITimeControl: 1
   searchHierarchy: 0
   active: 1
-  postPlayback: 2
+  postPlayback: 1
 --- !u!114 &5616000599828553141
 MonoBehaviour:
   m_ObjectHideFlags: 1
